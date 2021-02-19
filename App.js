@@ -6,8 +6,42 @@
  * @flow strict-local
  */
 
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Home!</Text>
+    </View>
+  );
+}
+
+function SettingsScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Settings!</Text>
+    </View>
+  );
+}
+
+const Tab = createBottomTabNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
+ /*
 import React from 'react';
-import Waterfall from "react-native-virtualized-waterfall";
+
 
 import {
   SafeAreaView,
@@ -25,36 +59,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import AsyncStorage from '@react-native-community/async-storage';
 
-// ES6 Minimized
-const Parse = require('parse/react-native.js');
-Parse.initialize("4CqI88sgCyhVozqeNldH7bfrNx3mUxXxf2SRnHjZ", "ln3sCP4oWq8E1TvWPHVRvBbM5VMlUbF1XkxIxZvK");
-Parse.serverURL = 'https://parseapi.back4app.com/'
-//javascriptKey is required only if you have it on server.
-
-
-
-Parse.setAsyncStorage(AsyncStorage);
-
-
-
-const GameScore = Parse.Object.extend("GameScore");
-const gameScore = new GameScore();
-
-gameScore.set("score", 123321);
-gameScore.set("playerName", "deng Plott");
-gameScore.set("cheatMode", false);
-
-gameScore.save()
-.then((gameScore) => {
-  // Execute any logic that should take place after the object is saved.
-  alert('New object created with objectId: ' + gameScore.id);
-}, (error) => {
-  // Execute any logic that should take place if the save fails.
-  // error is a Parse.Error with an error code and message.
-  alert('22Failed to create new object, with error code: ' + error.message);
-});
 
 const App: () => React$Node = () => {
   return (
@@ -146,3 +151,4 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+*/
