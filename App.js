@@ -11,21 +11,11 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
+import Home from './src/screens/Home'
+import Question from './src/screens/Question'
+import Activity from './src/screens/Activity'
+import Chat from './src/screens/Chat'
+import Me from './src/screens/Me'
 
 const Tab = createBottomTabNavigator();
 
@@ -33,8 +23,11 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="喳·日常"  component={Home} />
+        <Tab.Screen name="喳·问答" component={Question} />
+        <Tab.Screen name="喳·活动" component={Activity} />
+        <Tab.Screen name="喳·喳" component={Chat} />
+        <Tab.Screen name="喳·我的" component={Me} />
       </Tab.Navigator>
     </NavigationContainer>
   );
