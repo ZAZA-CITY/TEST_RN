@@ -10,7 +10,7 @@ import * as React from 'react';
 import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import InitParse from './src/config'
 import Home from './src/screens/Home'
 import Question from './src/screens/Question'
 import Activity from './src/screens/Activity'
@@ -18,6 +18,8 @@ import Chat from './src/screens/Chat'
 import Me from './src/screens/Me'
 
 const Tab = createBottomTabNavigator();
+// parse 初始化
+InitParse()
 
 export default function App() {
   return (
