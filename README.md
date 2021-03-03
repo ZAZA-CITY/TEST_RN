@@ -1,12 +1,19 @@
 # TEST_RN
 > 项目包含 ReactNavigation 和 ParseJS的基本配置；
 
-## 考核= UI + 数据
+## 考核 = UI + 数据
 
-### 页面2选1
+### UI考核 页面2选1
+* [页面1](https://github.com/ZAZA-CITY/TEST_RN/blob/zaza-activity/%E6%88%91%E7%9A%84%E4%B8%BB%E9%A1%B5.png)
+* [页面2](https://github.com/ZAZA-CITY/TEST_RN/blob/zaza-activity/%E6%88%91%E7%9A%84%E4%B8%BB%E9%A1%B5.png)
 
 
-#### UI考核
+## 数据考核
+* 页面的数据从back4app 后台获取
+* 数据在后台手动定义即可
+
+
+## 其他说明
 
 #### [parse 免费后台](https://www.back4app.com/)
 * back4app 是parse开源的免费后台
