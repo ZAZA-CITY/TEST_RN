@@ -15,6 +15,10 @@
 
 ## 其他说明
 
+#### 代码如何提交
+* 创建分支 分支名为你的名字的拼音
+* 提交pull request 
+
 #### [parse 免费后台](https://www.back4app.com/)
 * back4app 是parse开源的免费后台
 * 创建应用，在dashboard中获取appid 和JS key 放到项目中的``TestParse.js``
