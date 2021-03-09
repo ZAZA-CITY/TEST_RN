@@ -1,7 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
 // import Me from './Me';
 import React from 'react';
-import TextParse from '../../../TestParse';
+import TestParse from '../../../TestParse';
+import Parse from 'parse/react-native';
 import {
   View,
   Text,
@@ -22,6 +23,13 @@ class Me extends React.PureComponent {
   }
 
   componentDidMount() {
+    Parse.Config.get('ceshidata').then((data) => {
+      if (data && data.attributes) {
+        this.setState({
+          dataSource: data.attributes.ceshidata,
+        });
+      }
+    });
     let object = {
       name: 'sihubiao',
       zhiwei: 'app开发',
@@ -45,9 +53,9 @@ class Me extends React.PureComponent {
       changyonggongjuArr: ['C4D', '36kr', 'WPS', 'Pr'],
       changguangpingtaiArr: ['pinterest', '数英', 'YouTube', '抖音'],
     };
-    this.setState({
-      dataSource: object,
-    });
+    // this.setState({
+    //   dataSource: object,
+    // });
   }
 
   topView = () => {
