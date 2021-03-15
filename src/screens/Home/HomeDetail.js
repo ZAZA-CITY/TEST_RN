@@ -291,7 +291,7 @@ class HomeDetail extends React.PureComponent {
   render() {
     return (
       <View style={{backgroundColor: '#F5F5F5', flex: 1}}>
-        <View>
+        <View style={{backgroundColor: '#FFFFFF'}}>
           <View style={{height: 44}} />
           <View
             style={{
