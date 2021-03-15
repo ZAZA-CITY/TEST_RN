@@ -11,37 +11,6 @@ class HomeDetail extends React.PureComponent {
   topView = () => {
     return (
       <View style={{backgroundColor: '#FFFFFF'}}>
-        <View>
-          <View style={{height: 44}} />
-          <View
-            style={{
-              flexDirection: 'row',
-              height: 44,
-              justifyContent: 'space-between',
-            }}>
-            <Image
-              style={{
-                marginLeft: 16,
-                marginTop: 10,
-                width: 16,
-                height: 16,
-                transform: [{rotate: '180deg'}],
-              }}
-              source={require('../../assets/arrow.png')}
-            />
-            <Text
-              style={{
-                flex: 1,
-                textAlign: 'center',
-                fontSize: 16,
-                color: '#333333',
-                marginTop: 10,
-              }}>
-              活动详情
-            </Text>
-            <View />
-          </View>
-        </View>
         <Image
           style={{width: width, height: 225}}
           source={require('../../assets/carouse.png')}
@@ -322,7 +291,38 @@ class HomeDetail extends React.PureComponent {
   render() {
     return (
       <View style={{backgroundColor: '#F5F5F5', flex: 1}}>
-        <ScrollView>
+        <View>
+          <View style={{height: 44}} />
+          <View
+            style={{
+              flexDirection: 'row',
+              height: 44,
+              justifyContent: 'space-between',
+            }}>
+            <Image
+              style={{
+                marginLeft: 16,
+                marginTop: 10,
+                width: 16,
+                height: 16,
+                transform: [{rotate: '180deg'}],
+              }}
+              source={require('../../assets/arrow.png')}
+            />
+            <Text
+              style={{
+                flex: 1,
+                textAlign: 'center',
+                fontSize: 16,
+                color: '#333333',
+                marginTop: 10,
+              }}>
+              活动详情
+            </Text>
+            <View />
+          </View>
+        </View>
+        <ScrollView style={{marginBottom: 78}}>
           {this.topView()}
           {this.view2()}
           {this.view3()}
