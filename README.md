@@ -26,3 +26,6 @@
 #### [parsejs 官方文档](https://docs.parseplatform.org/js/guide/#getting-started)
 * 参考文档可以通过RN 提交数据到后台
 
+#### APP 页面 切图
+
+* [地址](https://github.com/ZAZA-CITY/TEST_RN/blob/zaza-activity/Boss%E7%9B%B4%E8%81%98%E6%B5%8B%E8%AF%95%E5%88%87%E5%9B%BE.zip)
