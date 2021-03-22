@@ -82,10 +82,10 @@ export default class TestWaterFall extends Component {
       userName,
     } = itemInfo;
     return (
-      <View style={styles.cell}>
+      <View style={[{height: size, width: columnWidth}]}>
         <View style={styles.cellContent}>
           <Image
-            style={styles.image}
+            style={[styles.image,{height:imgHeight, width: columnWidth}]}
             source={{uri: url}}/>
           <Text numberOfLines={contentLines} style={styles.contentText}>
             {content}
@@ -104,17 +104,13 @@ export default class TestWaterFall extends Component {
             </View>
           </View>
         </View>
-        <View style={styles.borderLine}/>
+        <View style={[styles.borderLine,{width: columnWidth}]}/>
       </View>
     );
   }
 }
 
 const styles = {
-  cell: {
-    height: size,
-    width: columnWidth,
-  },
   cellContent: {
     flex: 1,
     borderBottomLeftRadius: 5,
@@ -122,8 +118,6 @@ const styles = {
     backgroundColor: '#fff',
   },
   image: {
-    width: columnWidth,
-    height: imgHeight,
     borderTopLeftRadius: 5,
     borderTopRightRadius: 5,
   },
@@ -149,7 +143,7 @@ const styles = {
     margin: 5,
   },
   borderLine: {
-    height: 10, width: columnWidth, backgroundColor: '#eee'
+    height: 10,  backgroundColor: '#eee'
   },
 };
 
