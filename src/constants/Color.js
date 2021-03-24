@@ -15,3 +15,23 @@ export let TEXT_DARK_GRAY_COLOR = '#666666';
 export let TEXT_LIGHT_GRAY_COLOR = '#999999';
 // 灰色背景
 export let TEXT_BG_GRAY_COLOR = '#F5F5F5';
+
+
+
+// TEST_RN
+// 标题颜色
+export let COLOR_TITLE = '#000'
+
+// 子标题颜色
+export let COLOR_SUBTITLE = '#aaa'
+
+// 分割线颜色
+export let COLOR_BORDER = '#eee'
+
+// 页面背景颜色
+export let COLOR_PAGE = '#fff'
+
+// 主题绿色
+export let COLOR_THEME_GREEN = '#5CC77D'
+
+export let COLOR_BTN_TITLE = '#fff'
